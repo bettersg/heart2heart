@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "telegrambot"
+version = "0.1.0"
+description = "Telegram bot for heart2heart"
+authors = ["davidgohzk <david.gohzhekai@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-telegram-bot = "^13.8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.11b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
