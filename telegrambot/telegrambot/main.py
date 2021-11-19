@@ -11,6 +11,10 @@ bot.
 """
 
 import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from telegram import Update, ForceReply
 from telegram.ext import (
@@ -53,7 +57,7 @@ def echo(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater("TOKEN")
+    updater = Updater(os.environ.get("TELEGRAM_BOT_TOKEN"))
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
