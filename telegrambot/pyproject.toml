@@ -7,6 +7,7 @@ authors = ["davidgohzk <david.gohzhekai@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 python-telegram-bot = "^13.8.1"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
