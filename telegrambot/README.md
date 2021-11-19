@@ -59,6 +59,10 @@ poetry remove pandas
    poetry install  # will create a new environment using your updated configuration
    ```
 
+   Once you have done so, enter the telegram bot folder and type
+
+   > code .
+
 2. Issues with Poetry
 
    After removing dependencies and reinstalling, Poetry has some issues with the reinstallation. More at [https://stackoverflow.com/questions/69326748/poetry-install-command-fails-whl-files-are-not-found](https://stackoverflow.com/questions/69326748/poetry-install-command-fails-whl-files-are-not-found)
