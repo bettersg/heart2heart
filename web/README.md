@@ -14,11 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
@@ -29,18 +24,64 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Resources
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. [React + Firebase 9 Youtube Tutorial](https://www.youtube.com/watch?v=jCY6DH8F4oc&list=WL&index=10)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. [React + Firebase authentication with Express backend](https://www.youtube.com/watch?v=Jfkme6WE_Dk)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. [Deploy React App to Firebase hosting from Github CI/CD](https://www.youtube.com/watch?v=kLEp5tGDqcI)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. [Multiparty Video App With New Vonage Video Express (Experimental)](https://learn.vonage.com/blog/2021/09/27/create-a-multiparty-video-app-with-the-new-video-express/?utm_source=reddit&utm_medium=organic&utm_campaign=social_media)
 
-## Learn More
+## Current Progress
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Landing Page (done)
+- Registration Page
+- Session Page
+- Login Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## TODOs
+
+### Higher Priority
+
+- Web App Design (Using design library i.e. material, antd, tailwind etc)
+- User authentication (e.g. Email + Password authentication) w/ JWT authorization
+- Web App User Workflows + CRUD (Mostly for view/edit profile & video service)
+
+### Lower Priority
+
+- Firebase Hosting deployment
+- CI/CD
+
+---
+
+### System Sign Posting
+
+- Viewing of upcoming events (description, time)
+- ???
+
+### Breaking the ice
+
+- Timer
+
+### Self introductions
+
+- Visuals
+- Identity of users (i.e. username)
+
+### Safety and Privacy Consensus
+
+- ???
+- Timer?
+
+### Selecting card deck to start off with conversation + Going through the deck
+
+- Slideshow style??
+- Or just visual aids
+
+### Concluding the session
+
+- ???
+- Viewing of profile information? Email as POC?
+- What notes?
