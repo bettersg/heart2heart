@@ -20,12 +20,7 @@ const provider = new GoogleAuthProvider()
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly')
 
 export const googleLogin = () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      console.log(result)
-      window.location.href = '/register-complete'
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+  signInWithPopup(auth, provider).then(() => {
+    window.location.href = '/register-complete'
+  })
 }
