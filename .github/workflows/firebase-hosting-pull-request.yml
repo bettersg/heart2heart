@@ -16,3 +16,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HEART2HEART_7D75E }}'
           projectId: heart2heart-7d75e
+          entryPoint: ./web

@@ -19,3 +19,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HEART2HEART_7D75E }}'
           channelId: live
           projectId: heart2heart-7d75e
+          entryPoint: ./web
