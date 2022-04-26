@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage: React.FC = () => (
-  <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
+  <div className="flex items-center justify-center w-screen h-screen bg-yellow-100">
     <div className="px-40 py-20 bg-white rounded-md shadow-xl">
       <div className="flex flex-col items-center">
         <h1 className="font-bold text-blue-600 text-9xl">404</h1>
