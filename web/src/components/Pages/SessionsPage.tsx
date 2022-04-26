@@ -95,8 +95,8 @@ const SessionsPage: React.FC = () => (
       {meetings.map((meeting, idx) => {
         if (idx % 2 !== 0) return null;
         return (
-          <div className="flex w-full">
-            <div className="p-4 w-full">
+          <div className="flex flex-wrap">
+            <div className="p-4 w-1/2">
               <SessionCard
                 id={meeting.id}
                 title={meeting.title}
@@ -104,7 +104,7 @@ const SessionsPage: React.FC = () => (
               />
             </div>
             {meetings[idx + 1] ? (
-              <div className="p-4 w-full">
+              <div className="p-4 w-1/2">
                 <SessionCard
                   id={meetings[idx + 1].id}
                   title={meetings[idx + 1].title}

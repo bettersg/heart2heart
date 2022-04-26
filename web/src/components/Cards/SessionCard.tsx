@@ -11,12 +11,17 @@ const SessionCard: React.FC<SessionCardProps> = (props) => {
   return (
     <div
       key={id}
-      className="block max-w-full p-6 bg-amber-300 rounded-lg border border-gray-200 shadow-md"
+      className="block p-6 bg-amber-300 rounded-lg border border-gray-200 shadow-md"
     >
       <a href={`/sessions/${id}`}>
         <h5 className="mb-2 text-2xl font-bold tracking-tight">{title}</h5>
       </a>
-      <p className="mb-3 font-normal text-violet-600 overflow-hidden text-ellipsis whitespace-nowrap max-w-lg">
+      <div className="flex flex-wrap justify-center">
+        <div className="w-6/12 sm:w-4/12 px-4">
+          <img alt={title} src="https://i.imgur.com/9sALwYe.jpeg" />
+        </div>
+      </div>
+      <p className="mb-3 font-normal text-violet-600 overflow-hidden text-ellipsis whitespace-nowrap w-content">
         {body}
       </p>
       <a
