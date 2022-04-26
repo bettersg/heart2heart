@@ -17,6 +17,7 @@
       2,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
+    "react/require-default-props": "off",
     "react/no-unused-prop-types": "off",
     // note you must disable the base rule as it can report incorrect errors
     "no-use-before-define": "off",
