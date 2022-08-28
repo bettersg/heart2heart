@@ -1,5 +1,5 @@
 import React from 'react';
-import SessionCard from '../Cards/SessionCard';
+import SessionCard from '../components/Cards/SessionCard';
 
 const session = {
   id: 1,

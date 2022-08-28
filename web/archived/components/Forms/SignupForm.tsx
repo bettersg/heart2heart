@@ -1,5 +1,5 @@
 import React from 'react';
-import { googleLogin } from '../../config/firebaseConfig';
+import { googleLogin } from '../../../src/config/firebaseConfig';
 
 const SignupForm: React.FC = () => (
   <div className="min-h-screen flex flex-col bg-yellow-100">

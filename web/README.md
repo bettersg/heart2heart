@@ -24,6 +24,27 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Deploying to Firebase
+
+Generate the build folder by using the build script before deploying to firebase.
+
+```bash
+yarn build
+
+firebase login # If not logged in yet
+
+firebase deploy
+```
+
+You should see the follow logs upon successfully deployment:
+
+```bash
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/heart2heart-7d75e/overview
+Hosting URL: https://heart2heart-7d75e.web.app
+```
+
 ## Resources
 
 1. [React + Firebase 9 Youtube Tutorial](https://www.youtube.com/watch?v=jCY6DH8F4oc&list=WL&index=10)
