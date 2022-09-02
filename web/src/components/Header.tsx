@@ -7,10 +7,17 @@ import {
   Image,
   useDisclosure,
   useMediaQuery,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Text,
 } from '@chakra-ui/react';
 import React from 'react';
 import PrimaryBtn from './Buttons/PrimaryBtn';
-import SignUpModal from './SignUpModal';
 
 const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -75,7 +82,25 @@ const Header: React.FC = () => {
             fontSize={{ base: 'xs', lg: '2xl' }}
             text="Sign Up"
           />
-          <SignUpModal isCentered isOpen={isOpen} onClose={onClose} />
+          <Modal isCentered isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Modal Title</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Text fontWeight="bold" mb="1rem">
+                  This is the modal text
+                </Text>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Click here to register your interest
+                </Button>
+                <Button variant="ghost">Close</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </HStack>
       </Flex>
     </Flex>
