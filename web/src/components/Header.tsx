@@ -5,12 +5,16 @@ import {
   Heading,
   HStack,
   Image,
+  useDisclosure,
   useMediaQuery,
 } from '@chakra-ui/react';
 import React from 'react';
 import PrimaryBtn from './Buttons/PrimaryBtn';
+import SignUpModal from './SignUpModal';
 
 const Header: React.FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const [isMobile] = useMediaQuery('(max-width: 768px)');
   return (
     <Flex
@@ -66,7 +70,12 @@ const Header: React.FC = () => {
           >
             Login
           </Button>
-          <PrimaryBtn fontSize={{ base: 'xs', lg: '2xl' }} text="Sign Up" />
+          <PrimaryBtn
+            onClick={onOpen}
+            fontSize={{ base: 'xs', lg: '2xl' }}
+            text="Sign Up"
+          />
+          <SignUpModal isCentered isOpen={isOpen} onClose={onClose} />
         </HStack>
       </Flex>
     </Flex>
