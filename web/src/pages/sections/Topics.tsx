@@ -27,10 +27,10 @@ const Topics: React.FC = () => (
           <PreviewCard title="Mental Wellness" duration="30 Min" />
         </GridItem>
         <GridItem>
-          <PreviewCard title="XXXX" duration="45 Min" />
+          <PreviewCard title="LGBTQ+" duration="45 Min" />
         </GridItem>
         <GridItem>
-          <PreviewCard title="XXXX" duration="60 Min" />
+          <PreviewCard title="Climate Change" duration="60 Min" />
         </GridItem>
       </Grid>
     </Box>
