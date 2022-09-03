@@ -15,6 +15,7 @@ import {
   ModalBody,
   ModalCloseButton,
   Text,
+  Container,
 } from '@chakra-ui/react';
 import React from 'react';
 import PrimaryBtn from './Buttons/PrimaryBtn';
@@ -82,23 +83,31 @@ const Header: React.FC = () => {
             fontSize={{ base: 'xs', lg: '2xl' }}
             text="Sign Up"
           />
-          <Modal isCentered isOpen={isOpen} onClose={onClose}>
+          <Modal isCentered size="3xl" isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
-              <ModalHeader>Modal Title</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Text fontWeight="bold" mb="1rem">
-                  This is the modal text
-                </Text>
-              </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={onClose}>
-                  Click here to register your interest
-                </Button>
-                <Button variant="ghost">Close</Button>
-              </ModalFooter>
+              <Flex>
+                <Image w="200px" src="signup_modal_side.png" />
+                <Container>
+                  <ModalHeader>
+                    H2H offers a chance for you to be you!
+                  </ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <Text align="center" fontWeight="bold" mb="1rem">
+                      Register for our Beta Version Now!
+                    </Text>
+                    <Center>
+                      <Button colorScheme="blue" mr={3}>
+                        Fill up the form here!
+                      </Button>
+                    </Center>
+                  </ModalBody>
+                  <ModalFooter>
+                    {/* <Button onClick={onClose}>Cancel</Button> */}
+                  </ModalFooter>
+                </Container>
+              </Flex>
             </ModalContent>
           </Modal>
         </HStack>
