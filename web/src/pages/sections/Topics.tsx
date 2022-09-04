@@ -15,22 +15,46 @@ const Topics: React.FC = () => (
     <Box maxW="50%">
       <Grid templateColumns="repeat(3, 2fr)" gap={{ base: 1, lg: 6 }} flex={2}>
         <GridItem>
-          <PreviewCard title="Racism" duration="120 Min" />
+          <PreviewCard
+            title="Racism"
+            duration="120 Min"
+            bgimageurl="racism.jpg"
+          />
         </GridItem>
         <GridItem>
-          <PreviewCard title="Gender Inequality" duration="90 Min" />
+          <PreviewCard
+            title="Gender Inequality"
+            duration="90 Min"
+            bgimageurl="gender_equality.jpg"
+          />
         </GridItem>
         <GridItem>
-          <PreviewCard title="Sustainability" duration="60 Min" />
+          <PreviewCard
+            title="Sustainability"
+            duration="60 Min"
+            bgimageurl="sustainability.jpg"
+          />
         </GridItem>
         <GridItem>
-          <PreviewCard title="Mental Wellness" duration="30 Min" />
+          <PreviewCard
+            title="Mental Wellness"
+            duration="30 Min"
+            bgimageurl="mental_wellness.jpg"
+          />
         </GridItem>
         <GridItem>
-          <PreviewCard title="XXXX" duration="45 Min" />
+          <PreviewCard
+            title="LGBTQ+"
+            duration="45 Min"
+            bgimageurl="LGBTQ.jpg"
+          />
         </GridItem>
         <GridItem>
-          <PreviewCard title="XXXX" duration="60 Min" />
+          <PreviewCard
+            title="Climate Change"
+            duration="60 Min"
+            bgimageurl="climate_change.jpg"
+          />
         </GridItem>
       </Grid>
     </Box>

@@ -5,11 +5,13 @@ import { FiPlayCircle } from 'react-icons/fi';
 interface IPreviewCard {
   title: string;
   duration: string;
+  bgimageurl?: string;
 }
 
 const PreviewCard: React.FC<IPreviewCard> = ({
   title = 'xxx',
   duration = '60 Min',
+  bgimageurl = '',
 }) => (
   <Center>
     <Box
@@ -20,7 +22,9 @@ const PreviewCard: React.FC<IPreviewCard> = ({
       boxShadow="2xl"
       rounded="2xl"
       p={{ base: 1, lg: 6 }}
-      bgGradient="linear-gradient(0deg, #161B1C -10.78%, rgba(22, 27, 28, 0) 100%, rgba(22, 27, 28, 0) 100%)"
+      bgImage={bgimageurl}
+      bgSize="100% 100%"
+      opacity={0.75}
     >
       <HStack spacing={{ base: 1, lg: 4 }} mt={{ base: 2, lg: 12 }}>
         <Text fontSize={{ base: 8, lg: 27 }} color="white">
