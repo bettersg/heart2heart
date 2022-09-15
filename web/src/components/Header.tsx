@@ -11,7 +11,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   Text,
@@ -98,14 +97,13 @@ const Header: React.FC = () => {
                       Register for our Beta Version Now!
                     </Text>
                     <Center>
-                      <Button colorScheme="blue" mr={3}>
-                        Fill up the form here!
-                      </Button>
+                      <PrimaryBtn
+                        colorScheme="blue"
+                        mr={3}
+                        text="Fill up the form here!"
+                      />
                     </Center>
                   </ModalBody>
-                  <ModalFooter>
-                    {/* <Button onClick={onClose}>Cancel</Button> */}
-                  </ModalFooter>
                 </Container>
               </Flex>
             </ModalContent>
