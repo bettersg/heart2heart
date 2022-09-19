@@ -5,12 +5,23 @@ import {
   Heading,
   HStack,
   Image,
+  useDisclosure,
   useMediaQuery,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  Text,
+  Container,
 } from '@chakra-ui/react';
 import React from 'react';
 import PrimaryBtn from './Buttons/PrimaryBtn';
 
 const Header: React.FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const [isMobile] = useMediaQuery('(max-width: 768px)');
   return (
     <Flex
@@ -66,7 +77,37 @@ const Header: React.FC = () => {
           >
             Login
           </Button>
-          <PrimaryBtn fontSize={{ base: 'xs', lg: '2xl' }} text="Sign Up" />
+          <PrimaryBtn
+            onClick={onOpen}
+            fontSize={{ base: 'xs', lg: '2xl' }}
+            text="Sign Up"
+          />
+          <Modal isCentered size="3xl" isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <Flex>
+                <Image w="200px" src="signup_modal_side.png" />
+                <Container>
+                  <ModalHeader>
+                    H2H offers a chance for you to be you!
+                  </ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <Text align="center" fontWeight="bold" mb="1rem">
+                      Register for our Beta Version Now!
+                    </Text>
+                    <Center>
+                      <PrimaryBtn
+                        colorScheme="blue"
+                        mr={3}
+                        text="Fill up the form here!"
+                      />
+                    </Center>
+                  </ModalBody>
+                </Container>
+              </Flex>
+            </ModalContent>
+          </Modal>
         </HStack>
       </Flex>
     </Flex>
