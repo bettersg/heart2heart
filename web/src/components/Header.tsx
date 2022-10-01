@@ -1,116 +1,76 @@
 import {
-  Button,
   Center,
+  Container,
   Flex,
   Heading,
   HStack,
   Image,
-  useDisclosure,
-  useMediaQuery,
+  Link,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
   ModalBody,
   ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  Spacer,
   Text,
-  Container,
+  useDisclosure,
 } from '@chakra-ui/react';
 import React from 'react';
+import { PrimaryColour } from '../util/constants';
 import PrimaryBtn from './Buttons/PrimaryBtn';
 
 const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [isMobile] = useMediaQuery('(max-width: 768px)');
   return (
-    <Flex
-      px={{ base: 8, lg: 48 }}
-      py={{ base: 4, lg: 8 }}
-      width="full"
-      bg="yellow.50"
-      alignItems="flex-end"
-      justifyContent="space-between"
-    >
-      <Flex alignItems="center">
+    <>
+      <Flex height="full">
         <Center>
-          <Image
-            w={{ base: 16, lg: 'full' }}
-            h="full"
-            objectFit="cover"
-            src="logo.png"
-          />
+          <HStack>
+            <Image
+              height={{ base: '50px', lg: 'auto' }}
+              src="/images/logo.png"
+            />
+            <Heading color={PrimaryColour} fontSize={{ base: 16, lg: 32 }}>
+              Heart 2 Heart
+            </Heading>
+          </HStack>
         </Center>
-        <Heading
-          color="black"
-          ml={{ base: 4 }}
-          fontSize={{ base: 'xs', lg: '3xl' }}
-        >
-          Heart 2 Heart
-        </Heading>
-      </Flex>
-      <Flex alignItems="center">
-        <HStack spacing={{ base: 0, lg: 8 }}>
-          {isMobile ? null : (
-            <Button
-              fontSize={{ base: 'xs', lg: '2xl' }}
-              bg="none"
-              _hover={{ bg: 'none' }}
-            >
-              About
-            </Button>
-          )}
-          {isMobile ? null : (
-            <Button
-              fontSize={{ base: 'xs', lg: '2xl' }}
-              bg="none"
-              _hover={{ bg: 'none' }}
-            >
-              Find a session
-            </Button>
-          )}
-          <Button
-            fontSize={{ base: 'xs', lg: '2xl' }}
-            bg="none"
-            _hover={{ bg: 'none' }}
-            hidden
-          >
-            Login
-          </Button>
+        <Spacer />
+        <Center>
           <PrimaryBtn
             onClick={onOpen}
-            fontSize={{ base: 'xs', lg: '2xl' }}
+            fontSize={{ base: 8, lg: 16 }}
             text="Sign Up"
           />
-          <Modal isCentered size="3xl" isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay />
-            <ModalContent>
-              <Flex>
-                <Image w="200px" src="signup_modal_side.png" />
-                <Container>
-                  <ModalHeader>
-                    H2H offers a chance for you to be you!
-                  </ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody>
-                    <Text align="center" fontWeight="bold" mb="1rem">
-                      Register for our Beta Version Now!
-                    </Text>
-                    <Center>
-                      <PrimaryBtn
-                        colorScheme="blue"
-                        mr={3}
-                        text="Fill up the form here!"
-                      />
-                    </Center>
-                  </ModalBody>
-                </Container>
-              </Flex>
-            </ModalContent>
-          </Modal>
-        </HStack>
+        </Center>
       </Flex>
-    </Flex>
+      <Modal isCentered size="3xl" isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <Flex>
+            <Image w="200px" src="/images/signup_modal_side.png" />
+            <Container>
+              <ModalHeader>H2H offers a chance for you to be you!</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Text align="center" fontWeight="bold" mb="1rem">
+                  Register for our Beta Version Now!
+                </Text>
+                <Center>
+                  <Link
+                    href="https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_251CKKSQxbDJEQm"
+                    isExternal
+                  >
+                    <PrimaryBtn text="Fill up the form here!" />
+                  </Link>
+                </Center>
+              </ModalBody>
+            </Container>
+          </Flex>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 

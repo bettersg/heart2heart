@@ -1,41 +1,40 @@
-import { Box, Heading, HStack, Img, Text } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Heading, Img, Text } from '@chakra-ui/react';
 import React from 'react';
-import PrimaryBtn from '../../components/Buttons/PrimaryBtn';
 import { PrimaryColour, SecondaryColour } from '../../util/constants';
 
 const Introduction: React.FC = () => (
-  <Box
-    px={{ base: 8, lg: 48 }}
-    py={{ base: 4, lg: 24 }}
-    background="yellow.50"
-    justifyContent={{ base: 'space-between' }}
-    alignItems="center"
-    display={{ base: 'flex' }}
-  >
-    <Box mr={{ base: 4, lg: 16 }}>
-      <Heading fontSize={{ base: 16, lg: 36 }}>
-        <HStack>
-          <Text color={PrimaryColour}>Making</Text>
-          <Text color={SecondaryColour}>Connections</Text>
-        </HStack>
-        <Text color={PrimaryColour}>Across Boundaries</Text>
-      </Heading>
-      <Box my={{ base: 1, lg: 8 }}>
-        <Text fontSize={{ base: 12, lg: 27 }} as="b" textOverflow="ellipsis">
-          Heart2Heart is the community of choice for people who want to connect
-          with someone with a different perspective
-        </Text>
-      </Box>
-      <PrimaryBtn text="Get Started" hidden />
-    </Box>
-    <Box>
-      <Img
-        w={{ base: '100%' }}
-        src="making_connections.png"
-        alt="making_connections"
-      />
-    </Box>
-  </Box>
+  <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center">
+    <GridItem>
+      <>
+        <Heading fontSize={{ base: 12, lg: 36 }}>
+          <Grid templateColumns="repeat(1fr)" gap={0}>
+            <GridItem>
+              <Text color={SecondaryColour}>Forging Connections,</Text>
+            </GridItem>
+            <GridItem>
+              <Text color={PrimaryColour}>bridging conversations</Text>
+            </GridItem>
+          </Grid>
+        </Heading>
+        <Box my={{ base: 2, lg: 4 }}>
+          <Text
+            fontSize={{ base: 8, lg: 16 }}
+            noOfLines={5}
+            as="b"
+            textOverflow="ellipsis"
+          >
+            Heart2Heart is a community-based platform that seeks to connect
+            like-minded individuals algoirthmically through self-facilitated
+            video discussions, designed to encourage different perspectives and
+            more meaningful conversations
+          </Text>
+        </Box>
+      </>
+    </GridItem>
+    <GridItem>
+      <Img src="/images/making_connections.png" alt="making_connections" />
+    </GridItem>
+  </Grid>
 );
 
 export default Introduction;

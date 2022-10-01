@@ -7,9 +7,10 @@ interface IPrimaryBtn extends ButtonProps {
 
 const PrimaryBtn: React.FC<IPrimaryBtn> = ({ text, ...props }) => (
   <Button
+    size={{ base: 'xs', lg: 'md' }}
     flex={1}
     fontSize="sm"
-    rounded="full"
+    rounded="2xl"
     bg="yellow.400"
     color="black"
     _hover={{

@@ -1,77 +1,63 @@
-import { Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Heading, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
-import PrimaryBtn from '../../components/Buttons/PrimaryBtn';
 import PreviewCard from '../../components/Cards/PreviewCard';
 import { PrimaryColour, SecondaryColour } from '../../util/constants';
 
 const Topics: React.FC = () => (
-  <Box
-    px={{ base: 8, lg: 48 }}
-    background="yellow.50"
-    alignItems="center"
-    display={{ base: 'flex' }}
-    justifyContent={{ base: 'space-between' }}
-  >
-    <Box maxW="50%">
-      <Grid templateColumns="repeat(3, 2fr)" gap={{ base: 1, lg: 6 }} flex={2}>
-        <GridItem>
-          <PreviewCard
-            title="Racism"
-            duration="120 Min"
-            bgimageurl="racism.jpg"
-          />
-        </GridItem>
-        <GridItem>
-          <PreviewCard
-            title="Gender Inequality"
-            duration="90 Min"
-            bgimageurl="gender_equality.jpg"
-          />
-        </GridItem>
-        <GridItem>
-          <PreviewCard
-            title="Sustainability"
-            duration="60 Min"
-            bgimageurl="sustainability.jpg"
-          />
-        </GridItem>
-        <GridItem>
-          <PreviewCard
-            title="Mental Wellness"
-            duration="30 Min"
-            bgimageurl="mental_wellness.jpg"
-          />
-        </GridItem>
-        <GridItem>
-          <PreviewCard
-            title="LGBTQ+"
-            duration="45 Min"
-            bgimageurl="LGBTQ.jpg"
-          />
-        </GridItem>
-        <GridItem>
-          <PreviewCard
-            title="Climate Change"
-            duration="60 Min"
-            bgimageurl="climate_change.jpg"
-          />
-        </GridItem>
+  <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center">
+    <GridItem>
+      <Grid templateColumns="repeat(3, 1fr)" gap={1}>
+        <PreviewCard bgimageurl="/images/racism.jpg" alt="racism" />
+        <PreviewCard
+          bgimageurl="/images/gender_equality.jpg"
+          alt="gender_equality"
+        />
+        <PreviewCard
+          bgimageurl="/images/sustainability.jpg"
+          alt="sustainability"
+        />
+        <PreviewCard
+          bgimageurl="/images/mental_wellness.jpg"
+          alt="mental_wellness"
+        />
+        <PreviewCard bgimageurl="/images/LGBTQ.jpg" alt="LGBTQ" />
+        <PreviewCard
+          bgimageurl="/images/climate_change.jpg"
+          alt="climate_change"
+        />
       </Grid>
-    </Box>
-    <Box flex={1} ml={{ base: 12 }}>
-      <Heading fontSize={{ base: 16, lg: 36 }} w="full" textAlign="center">
-        <Text color={PrimaryColour}>Find a variety of</Text>
-        <Text color={SecondaryColour}>topics</Text>
-        <Text color={PrimaryColour}>you are passionate about</Text>
-      </Heading>
-      <Box my={{ base: 1, lg: 8 }}>
-        <Text fontSize={{ base: 12, lg: 27 }} as="b" textOverflow="ellipsis">
-          xxx
-        </Text>
-      </Box>
-      <PrimaryBtn text="See more" hidden />
-    </Box>
-  </Box>
+    </GridItem>
+    <GridItem>
+      <>
+        <Heading fontSize={{ base: 12, lg: 36 }}>
+          <Grid templateColumns="repeat(1fr)" gap={0}>
+            <GridItem>
+              <HStack>
+                <Text color={SecondaryColour}>Choose a topic</Text>
+                <Text color={PrimaryColour}>that</Text>
+              </HStack>
+            </GridItem>
+            <GridItem>
+              <Text color={PrimaryColour}>resonates with you</Text>
+            </GridItem>
+          </Grid>
+        </Heading>
+        <Box my={{ base: 2, lg: 4 }}>
+          <Text
+            fontSize={{ base: 8, lg: 16 }}
+            noOfLines={5}
+            as="b"
+            textOverflow="ellipsis"
+          >
+            We offer a variety of sessions centered around core social issues
+            and themes. Each session draws upon psychological facilitation
+            techniques to create a highly intentional experience for each
+            participant
+          </Text>
+        </Box>
+      </>
+    </GridItem>
+  </Grid>
 );
 
 export default Topics;

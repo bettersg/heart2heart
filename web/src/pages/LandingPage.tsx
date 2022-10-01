@@ -1,14 +1,21 @@
+import { Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
 import Introduction from './sections/Introduction';
 import Story from './sections/Story';
 import Topics from './sections/Topics';
 
 const LandingPage: React.FC = () => (
-  <>
-    <Introduction />
-    <Topics />
-    <Story />
-  </>
+  <Grid templateColumns="repeat(1fr, 3)" gap={{ base: 32, lg: 16 }} py={24}>
+    <GridItem>
+      <Introduction />
+    </GridItem>
+    <GridItem>
+      <Topics />
+    </GridItem>
+    <GridItem>
+      <Story />
+    </GridItem>
+  </Grid>
 );
 
 export default LandingPage;
