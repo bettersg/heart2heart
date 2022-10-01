@@ -11,7 +11,7 @@ import React from 'react';
 import { PrimaryColour, SecondaryColour } from '../../util/constants';
 
 const Story: React.FC = () => (
-  <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center">
+  <Grid templateColumns="repeat(2, 1fr)" gap={16} alignItems="center">
     <GridItem>
       <Img src="/images/our_story.png" alt="our_story" />
     </GridItem>

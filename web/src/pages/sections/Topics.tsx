@@ -4,7 +4,7 @@ import PreviewCard from '../../components/Cards/PreviewCard';
 import { PrimaryColour, SecondaryColour } from '../../util/constants';
 
 const Topics: React.FC = () => (
-  <Grid templateColumns="repeat(2, 1fr)" gap={4} alignItems="center">
+  <Grid templateColumns="repeat(2, 1fr)" gap={16} alignItems="center">
     <GridItem>
       <Grid templateColumns="repeat(3, 1fr)" gap={1}>
         <PreviewCard bgimageurl="/images/racism.jpg" alt="racism" />

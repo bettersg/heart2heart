@@ -12,8 +12,8 @@ const PreviewCard: React.FC<IPreviewCard> = ({
 }) => (
   <GridItem>
     <Img
-      boxSize={{ base: '50px', lg: '175px' }}
-      objectFit="fill"
+      boxSize={{ base: '50px', lg: 'full' }}
+      objectFit="cover"
       src={bgimageurl}
       alt={alt}
     />
