@@ -1,27 +1,12 @@
-import {
-  Center,
-  Container,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Link,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  Spacer,
-  Text,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Center, Flex, Heading, HStack, Image, Spacer } from '@chakra-ui/react';
 import React from 'react';
+import { useGlobalStore } from '../stores';
 import { PrimaryColour } from '../util/constants';
 import PrimaryBtn from './Buttons/PrimaryBtn';
 
 const Header: React.FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [setOpen] = useGlobalStore((state) => [state.setSignupModalOpen]);
+
   return (
     <>
       <Flex height="full">
@@ -39,37 +24,12 @@ const Header: React.FC = () => {
         <Spacer />
         <Center>
           <PrimaryBtn
-            onClick={onOpen}
+            onClick={setOpen}
             fontSize={{ base: 8, lg: 16 }}
             text="Sign Up"
           />
         </Center>
       </Flex>
-      <Modal isCentered size="3xl" isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <Flex>
-            <Image w="200px" src="/images/signup_modal_side.png" />
-            <Container>
-              <ModalHeader>H2H offers a chance for you to be you!</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Text align="center" fontWeight="bold" mb="1rem">
-                  Register for our Beta Version Now!
-                </Text>
-                <Center>
-                  <Link
-                    href="https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_251CKKSQxbDJEQm"
-                    isExternal
-                  >
-                    <PrimaryBtn text="Fill up the form here!" />
-                  </Link>
-                </Center>
-              </ModalBody>
-            </Container>
-          </Flex>
-        </ModalContent>
-      </Modal>
     </>
   );
 };
