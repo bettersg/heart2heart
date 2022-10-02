@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@chakra-ui/react';
+import { Button, ButtonProps, Text } from '@chakra-ui/react';
 import React from 'react';
 
 interface IPrimaryBtn extends ButtonProps {
@@ -7,12 +7,9 @@ interface IPrimaryBtn extends ButtonProps {
 
 const PrimaryBtn: React.FC<IPrimaryBtn> = ({ text, ...props }) => (
   <Button
-    size={{ base: 'xs', lg: 'md' }}
-    flex={1}
-    fontSize="sm"
+    size={{ base: 'xs', lg: 'lg' }}
     rounded="2xl"
     bg="yellow.400"
-    color="black"
     _hover={{
       bg: 'yellow.500',
     }}
@@ -21,7 +18,7 @@ const PrimaryBtn: React.FC<IPrimaryBtn> = ({ text, ...props }) => (
     }}
     {...props}
   >
-    {text}
+    <Text fontSize={{ base: '8px', lg: '16px' }}>{text}</Text>
   </Button>
 );
 

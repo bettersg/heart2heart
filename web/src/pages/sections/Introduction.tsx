@@ -35,11 +35,7 @@ const Introduction: React.FC = () => {
             </Text>
           </Box>
           <Box my={{ base: 2, lg: 4 }}>
-            <PrimaryBtn
-              onClick={setOpen}
-              fontSize={{ base: 8, lg: 16 }}
-              text="Sign Up"
-            />
+            <PrimaryBtn onClick={setOpen} text="Sign Up" />
           </Box>
         </>
       </GridItem>

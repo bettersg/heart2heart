@@ -23,11 +23,7 @@ const Header: React.FC = () => {
         </Center>
         <Spacer />
         <Center>
-          <PrimaryBtn
-            onClick={setOpen}
-            fontSize={{ base: 8, lg: 16 }}
-            text="Sign Up"
-          />
+          <PrimaryBtn onClick={setOpen} text="Sign Up" />
         </Center>
       </Flex>
     </>
