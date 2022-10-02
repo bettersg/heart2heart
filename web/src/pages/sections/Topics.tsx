@@ -32,7 +32,7 @@ const Topics: React.FC = () => (
         <Heading fontSize={{ base: 12, lg: 36 }}>
           <Grid templateColumns="repeat(1fr)" gap={0}>
             <GridItem>
-              <HStack>
+              <HStack spacing={1}>
                 <Text color={SecondaryColour}>Choose a topic</Text>
                 <Text color={PrimaryColour}>that</Text>
               </HStack>

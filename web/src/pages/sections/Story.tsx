@@ -18,7 +18,7 @@ const Story: React.FC = () => (
     <GridItem>
       <>
         <Heading fontSize={{ base: 12, lg: 36 }}>
-          <HStack>
+          <HStack spacing={1}>
             <Text color={PrimaryColour}>Behind the</Text>
             <Text color={SecondaryColour}>Scenes</Text>
           </HStack>
