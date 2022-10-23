@@ -48,23 +48,38 @@ const App: React.FC = () => {
           <Footer />
         </GridItem>
       </Grid>
-      <Modal isCentered size="3xl" isOpen={isOpen} onClose={setClose}>
+      <Modal
+        isCentered
+        size={{ base: 'lg', lg: '4xl' }}
+        isOpen={isOpen}
+        onClose={setClose}
+      >
         <ModalOverlay />
         <ModalContent borderRadius="3xl">
           <Flex>
             <Image
               borderLeftRadius="3xl"
-              w="200px"
+              w={{ base: '100px', lg: '200px' }}
               src="/images/signup_modal_side.png"
             />
             <Container>
-              <ModalHeader>H2H offers a chance for you to be you!</ModalHeader>
+              <ModalHeader fontSize={{ base: 12, lg: 24 }}>
+                H2H offers a chance for you to be you!
+              </ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <Text align="center" fontWeight="bold">
+                <Text
+                  align="center"
+                  fontWeight="bold"
+                  fontSize={{ base: 8, lg: 16 }}
+                >
                   Register for our Beta Version Now!
                 </Text>
-                <Text align="center" my={{ base: 4, lg: 8 }}>
+                <Text
+                  align="center"
+                  my={{ base: 4, lg: 8 }}
+                  fontSize={{ base: 8, lg: 16 }}
+                >
                   <Link
                     href="https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_251CKKSQxbDJEQm"
                     isExternal
@@ -72,7 +87,7 @@ const App: React.FC = () => {
                     <PrimaryBtn text="Fill up the form here!" />
                   </Link>
                 </Text>
-                <Text fontWeight="bold" fontSize="xs">
+                <Text fontWeight="bold" fontSize={{ base: 6, lg: 12 }}>
                   By filling this form, you agree to our{' '}
                   <Link color="blue" href="/privacy" isExternal>
                     privacy notice
