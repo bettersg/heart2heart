@@ -29,7 +29,7 @@ const Introduction: React.FC = () => {
               textOverflow="ellipsis"
             >
               Heart2Heart is a community-based platform that seeks to connect
-              like-minded individuals algoirthmically through self-facilitated
+              like-minded individuals algorithmically through self-facilitated
               video discussions, designed to encourage different perspectives
               and more meaningful conversations
             </Text>
