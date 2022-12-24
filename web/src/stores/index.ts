@@ -1,22 +1,27 @@
 import create, { StateCreator } from 'zustand';
 
-export interface SignupModalState {
+export interface ModalState {
   isSignupModalOpen: boolean;
   setSignupModalOpen: () => void;
   setSignupModalClose: () => void;
+
+  isNoticeModalOpen: boolean;
+  setNoticeModalOpen: () => void;
+  setNoticeModalClose: () => void;
 }
 
-const createSignupModalState: StateCreator<
-  SignupModalState,
-  [],
-  [],
-  SignupModalState
-> = (set) => ({
+const createModalState: StateCreator<ModalState, [], [], ModalState> = (
+  set
+) => ({
   isSignupModalOpen: false,
   setSignupModalOpen: () => set(() => ({ isSignupModalOpen: true })),
   setSignupModalClose: () => set(() => ({ isSignupModalOpen: false })),
+
+  isNoticeModalOpen: true,
+  setNoticeModalOpen: () => set(() => ({ isNoticeModalOpen: true })),
+  setNoticeModalClose: () => set(() => ({ isNoticeModalOpen: false })),
 });
 
-export const useGlobalStore = create<SignupModalState>()((...a) => ({
-  ...createSignupModalState(...a),
+export const useGlobalStore = create<ModalState>()((...a) => ({
+  ...createModalState(...a),
 }));

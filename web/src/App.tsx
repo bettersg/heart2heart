@@ -25,10 +25,14 @@ import PrivacyPage from './pages/PrivacyPage';
 import { useGlobalStore } from './stores';
 
 const App: React.FC = () => {
-  const [isOpen, setClose] = useGlobalStore((state) => [
-    state.isSignupModalOpen,
-    state.setSignupModalClose,
-  ]);
+  const [isSignupOpen, setSignupClose, isNoticeOpen, setNoticeClose] =
+    useGlobalStore((state) => [
+      state.isSignupModalOpen,
+      state.setSignupModalClose,
+
+      state.isNoticeModalOpen,
+      state.setNoticeModalClose,
+    ]);
 
   return (
     <Box background="yellow.50">
@@ -51,8 +55,36 @@ const App: React.FC = () => {
       <Modal
         isCentered
         size={{ base: 'lg', lg: '4xl' }}
-        isOpen={isOpen}
-        onClose={setClose}
+        isOpen={isNoticeOpen}
+        onClose={setNoticeClose}
+      >
+        <ModalOverlay />
+        <ModalContent borderRadius="3xl">
+          <Container>
+            <ModalHeader fontSize={{ base: 12, lg: 24 }}>
+              Heart2Heart is on hiatus
+            </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Text
+                align="center"
+                fontWeight="bold"
+                fontSize={{ base: 8, lg: 16 }}
+              >
+                Thank you for your interest in Heart2Heart. Unfortunately, due
+                to bandwidth constraints, the team has decided to pause work on
+                this project indefinitely. We hope you are able to facilitate
+                effective conversations in your own ways!
+              </Text>
+            </ModalBody>
+          </Container>
+        </ModalContent>
+      </Modal>
+      <Modal
+        isCentered
+        size={{ base: 'lg', lg: '4xl' }}
+        isOpen={isSignupOpen}
+        onClose={setSignupClose}
       >
         <ModalOverlay />
         <ModalContent borderRadius="3xl">
